@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanmuga Priya K | Portfolio</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    color: white;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #38bdf8;
+    box-shadow: 0 0 30px #38bdf8;
+}
+
+.info h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.info h3 {
+    color: #cbd5f5;
+    margin-bottom: 20px;
+}
+
+.social a {
+    color: white;
+    font-size: 24px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: #38bdf8;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.contact-btn {
+    background: #38bdf8;
+    color: black;
+}
+
+.resume-btn {
+    border: 2px solid #38bdf8;
+    color: white;
+}
+
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.skill {
+    font-size: 50px;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: 0 0 15px #38bdf8;
+}
+
+.skill:nth-child(2) { animation-delay: 1s; }
+.skill:nth-child(3) { animation-delay: 2s; }
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+    <img src="your-photo.jpg" class="profile-img" alt="Profile Photo">
+
+    <div class="info">
+        <h1>Shanmuga Priya K</h1>
+        <h3>Aspiring Data Analyst & Digital Marketing Enthusiast</h3>
+
+        <div class="social">
+            <a href="mailto:priyasanmuga48@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+
+        <div class="buttons">
+            <a href="mailto:priyasanmuga48@gmail.com" class="btn contact-btn">
+                Contact Me
+            </a>
+
+            <a href="resume.pdf" target="_blank" class="btn resume-btn">
+                View Resume
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        Paste your About Me text here.
+    </p>
+
+    <div class="skills">
+        <div class="skill"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="skill"><i class="fa-solid fa-pen-nib"></i></div>
+        <div class="skill"><i class="fa-solid fa-camera"></i></div>
+    </div>
+</section>
+
+</body>
+</html>
