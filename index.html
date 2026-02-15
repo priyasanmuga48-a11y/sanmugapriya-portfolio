@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sanmuga Priya K | Portfolio</title>
+<title>Sanmugapriya K | Portfolio</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -16,6 +16,7 @@ body {
     color: white;
 }
 
+/* HERO SECTION */
 .hero {
     display: flex;
     align-items: center;
@@ -34,15 +35,8 @@ body {
     box-shadow: 0 0 30px #38bdf8;
 }
 
-.info h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.info h3 {
-    color: #cbd5f5;
-    margin-bottom: 20px;
-}
+.info h1 { font-size: 40px; margin-bottom: 10px; }
+.info h3 { color: #cbd5f5; margin-bottom: 20px; }
 
 .social a {
     color: white;
@@ -50,14 +44,9 @@ body {
     margin-right: 20px;
     transition: 0.3s;
 }
+.social a:hover { color: #38bdf8; }
 
-.social a:hover {
-    color: #38bdf8;
-}
-
-.buttons {
-    margin-top: 20px;
-}
+.buttons { margin-top: 20px; }
 
 .btn {
     padding: 12px 20px;
@@ -68,15 +57,8 @@ body {
     display: inline-block;
 }
 
-.contact-btn {
-    background: #38bdf8;
-    color: black;
-}
-
-.resume-btn {
-    border: 2px solid #38bdf8;
-    color: white;
-}
+.contact-btn { background: #38bdf8; color: black; }
+.resume-btn { border: 2px solid #38bdf8; color: white; }
 
 section {
     max-width: 900px;
@@ -91,11 +73,7 @@ section {
     margin-top: 20px;
 }
 
-/* EDUCATION CARDS */
-.education-container {
-    margin-top: 30px;
-}
-
+/* EDUCATION */
 .edu-card {
     background: #1e293b;
     padding: 20px;
@@ -105,7 +83,7 @@ section {
     box-shadow: 0 0 15px rgba(56,189,248,0.3);
 }
 
-/* MOVING ICONS */
+/* FLOATING SKILLS */
 .skills {
     display: flex;
     justify-content: center;
@@ -126,13 +104,8 @@ section {
     0%,100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
 }
-    /* EXPERIENCE SECTION */
-.experience-container {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-}
 
+/* EXPERIENCE */
 .exp-description {
     margin: 15px 0 25px;
     line-height: 1.6;
@@ -143,28 +116,49 @@ section {
 .logo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 20px;
+    gap: 30px;
+    margin-top: 25px;
 }
 
-/* LOGO STYLE */
+/* SAME SIZE LOGOS */
 .logo-grid img {
-    width: 100%;
-    max-width: 160px;
+    width: 140px;
+    height: 80px;
+    object-fit: contain;
     margin: auto;
     padding: 15px;
     background: white;
-    border-radius: 15px;
+    border-radius: 12px;
 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: popUp 0.6s forwards;
 }
 
-/* 3D HOVER EFFECT */
+/* POP-UP DELAY */
+.logo-grid img:nth-child(1){animation-delay:0.2s}
+.logo-grid img:nth-child(2){animation-delay:0.4s}
+.logo-grid img:nth-child(3){animation-delay:0.6s}
+.logo-grid img:nth-child(4){animation-delay:0.8s}
+.logo-grid img:nth-child(5){animation-delay:1s}
+.logo-grid img:nth-child(6){animation-delay:1.2s}
+.logo-grid img:nth-child(7){animation-delay:1.4s}
+.logo-grid img:nth-child(8){animation-delay:1.6s}
+.logo-grid img:nth-child(9){animation-delay:1.8s}
+
+/* POP ANIMATION */
+@keyframes popUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3D HOVER */
 .logo-grid img:hover {
-    transform: rotateY(15deg) rotateX(8deg) scale(1.08);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    transform: scale(1.08) rotateY(10deg);
 }
 </style>
 </head>
@@ -172,107 +166,77 @@ section {
 <body>
 
 <div class="hero">
-    <img src="your-photo.jpg" class="profile-img" alt="Profile Photo">
+    <img src="your-photo.jpg" class="profile-img">
 
     <div class="info">
-        <h1>Sanmuga Priya K</h1>
+        <h1>Sanmugapriya K</h1>
         <h3>Aspiring Data Analyst & Digital Marketing Enthusiast</h3>
 
         <div class="social">
             <a href="mailto:priyasanmuga48@gmail.com">
                 <i class="fa-solid fa-envelope"></i>
             </a>
-
             <a href="https://www.linkedin.com/in/sanmuga-priya-25a2632a6" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
         </div>
 
         <div class="buttons">
-            <a href="mailto:priyasanmuga48@gmail.com" class="btn contact-btn">
-                Contact Me
-            </a>
-
-            <a href="resume.pdf" target="_blank" class="btn resume-btn">
-                View Resume
-            </a>
+            <a href="mailto:priyasanmuga48@gmail.com" class="btn contact-btn">Contact Me</a>
+            <a href="resume.pdf" target="_blank" class="btn resume-btn">View Resume</a>
         </div>
     </div>
 </div>
-<!-- ABOUT -->
-<section>
-    <h2>About Me</h2>
-    <p class="about-text">
-        I am focused on building a career in digital marketing and social media, 
-        with a strong interest in data-driven decision making and campaign performance analysis. 
-        I work with content strategy, audience engagement, and marketing analytics 
-        to understand what drives results.
-        <br><br>
-        Alongside this, I have hands-on industry experience as a UGC creator, producing 
-        product-focused video content for 50+ brands. Through these collaborations, 
-        I have developed practical skills in brand communication, content planning, 
-        and performance-oriented storytelling.
-        <br><br>
-        I am seeking entry-level opportunities or freelance projects in Chennai where 
-        I can contribute to marketing initiatives, analyze performance data, and create 
-        impactful content.
-    </p>
 
-    <div class="skills">
-        <div class="skill"><i class="fa-solid fa-chart-line"></i></div>
-        <div class="skill"><i class="fa-solid fa-pen-nib"></i></div>
-        <div class="skill"><i class="fa-solid fa-camera"></i></div>
-    </div>
+<section>
+<h2>About Me</h2>
+<p class="about-text">
+I am focused on building a career in digital marketing and social media with a strong interest in data-driven decision making and campaign performance analysis. I work with content strategy, audience engagement, and marketing analytics to understand what drives results.
+<br><br>
+Alongside this, I have hands-on industry experience as a UGC creator, producing product-focused video content for 50+ brands. I am seeking entry-level or freelance opportunities in Chennai.
+</p>
+
+<div class="skills">
+<div class="skill"><i class="fa-solid fa-chart-line"></i></div>
+<div class="skill"><i class="fa-solid fa-pen-nib"></i></div>
+<div class="skill"><i class="fa-solid fa-camera"></i></div>
+</div>
 </section>
 
-    <!-- EDUCATION -->
 <section>
-    <h2>Education</h2>
-
-    <div class="education-container">
-
-        <div class="edu-card">
-            <p><strong>College:</strong> Dwaraka Doss Goverdhan Doss Vaishnav College</p>
-            <p><strong>Degree:</strong> B.Sc Physics with Computer Applications</p>
-            <p><strong>Location:</strong> Chennai</p>
-            <p><strong>Duration:</strong> June 2023 – April 2026</p>
-            <p><strong>Current CGPA:</strong> 7.5</p>
-        </div>
-
-    </div>
+<h2>Education</h2>
+<div class="edu-card">
+<p><strong>College:</strong> Dwaraka Doss Goverdhan Doss Vaishnav College</p>
+<p><strong>Degree:</strong> B.Sc Physics with Computer Applications</p>
+<p><strong>Location:</strong> Chennai</p>
+<p><strong>Duration:</strong> June 2023 – April 2026</p>
+<p><strong>Current CGPA:</strong> 7.5</p>
+</div>
 </section>
 
-    <!-- EXPERIENCE -->
 <section>
-    <h2>Experience</h2>
+<h2>Experience</h2>
+<h3>User Generated Content (UGC) Creator</h3>
 
-    <div class="experience-container">
-        <h3>User Generated Content (UGC) Creator</h3>
+<p class="exp-description">
+Created product-focused user-generated content for beauty and personal care brands. Produced engaging Instagram Reels using photography, editing, and storytelling skills.
+</p>
 
-        <p class="exp-description">
-            Created product-focused user-generated content for multiple beauty and personal care brands.
-            Produced engaging short-form videos for Instagram Reels using photography, editing, and storytelling skills.
-            Focused on brand communication, audience engagement, and visual presentation.
-        </p>
+<h4>Brands I’ve Worked With</h4>
 
-        <h4>Brands I’ve Worked With</h4>
-
-        <div class="logo-grid">
-            <img src="mamaearth.png" alt="mamaearth">
-            <img src="bioderma.png" alt="bioderma">
-            <img src="ponds.png" alt="ponds">
-
-            <img src="swissbeauty.png" alt="swissbeauty">
-            <img src="foxtale.png" alt="foxtale">
-            <img src="bebodywise.png" alt="bebodywise">
-
-            <img src="cerave.png" alt="cerave">
-            <img src="dotandkey.png" alt="dotandkey">
-            <img src="aqualogica.png" alt="aqualogica">
-
-        </div>
-    </div>
+<div class="logo-grid">
+<img src="mamaearth.png">
+<img src="bioderma.png">
+<img src="ponds.png">
+<img src="swissbeauty.png">
+<img src="foxtale.png">
+<img src="bebodywise.png">
+<img src="cerave.png">
+<img src="dotandkey.png">
+<img src="aqualogica.png">
+</div>
 </section>
 
-
+</body>
+</html>
 
